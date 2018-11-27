@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'app-shared/styles/imports';
+@import '../node_modules/font-awesome/css/font-awesome.css';
+
+::ng-deep .mat-form-field-wrapper{ 
+  padding: 0px !important; 
+}
+
+.inline-block-desc > * {
+  display: inline-block;
+}
+
+.half-width {
+  width: 40%;
+  margin-left: 1.5rem;
+}
+
+.mat-card-title {
+  padding: 1.5rem !important;
+  font-size: 20px !important;
+  font-weight: 200 !important;
+}
+
+[hidden] {
+  display: none;
+}
+
+mat-icon,
+i {
+  &.fa-times {
+    color: red;
+  }
+}
+
+.mat-header-row,
+.mat-row {
+  padding: 5px 0px !important;
+  min-height: 0px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

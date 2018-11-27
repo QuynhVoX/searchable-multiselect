@@ -1,0 +1,24 @@
+<mat-form-field [ngClass]="class">
+  <i class="background-icon fa fa-search" *ngIf="searching"></i>
+  <input #input aria-label="option.text" spellcheck="false" [formControl]="inputFormControl" (input)="itemChange($event.target.value)"
+    (focus)="input.select(); onFocus()" [matAutocomplete]="auto"  matInput>
+  
+  <mat-placeholder *ngIf="placeHolder">{{placeHolder}}</mat-placeholder>
+  
+  <button mat-icon-button class="button-offset" *ngIf="!input.value" matSuffix>
+    <mat-icon class="fa fa-caret-down fa-5x"></mat-icon>
+  </button>
+
+  <button mat-icon-button class="button-offset" *ngIf="input.value && showClear" matSuffix aria-label="Clear"
+    (click)="input.value=null; clearValue($event)">
+    <mat-icon class="fa fa-times fa-5x"></mat-icon>
+  </button>
+
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="showValue ? displayWithValue : displayWith" color="accent"
+    (optionSelected)="itemSelected($event)">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{ option.text }}
+    </mat-option>
+  </mat-autocomplete>
+
+</mat-form-field>

@@ -1,0 +1,42 @@
+.swal2-modal {
+  min-width: 500px;
+
+  #swal2-title {
+    position: absolute;
+    background-color: #004f71;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    padding: 0 14px 0 14px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 40px;
+  }
+
+  .swal2-header {
+    padding-top: 20px;
+  }
+
+  .swal2-actions {
+    button.swal2-styled.swal2-confirm {
+      background-color: #004f71;
+    }
+
+    button.swal2-styled {
+      font-size: 1.5rem;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  #swal2-content {
+    font-size: 1.75rem;
+    color: black;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+}

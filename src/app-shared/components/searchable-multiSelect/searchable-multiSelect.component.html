@@ -1,0 +1,38 @@
+<mat-form-field [ngClass]="class">
+  <span class="input-wrapper" (click)="toggleSearch();">
+    <label class="no-wrap">{{selectedLabel}}</label>
+    
+    <input #input aria-label="placeHolder" spellcheck="false" [formControl]="inputFormControl"  
+      (input)="searchChange($event.target.value)"
+      [matAutocomplete]="auto" matInput [hidden]="!searching && selection.selected.length" > 
+    <i [class]="selection.selected.length? 'background-icon fa fa-search': 'background-icon1 fa fa-search'" *ngIf="searching"></i>
+  </span>
+  <mat-placeholder >{{placeHolder}}</mat-placeholder>
+  <button mat-icon-button class="button-offset" matSuffix (click)="toggleSearch();input.select();">
+    <mat-icon class="fa fa-caret-down fa-5x"></mat-icon>
+  </button>
+ 
+  <mat-autocomplete  #auto="matAutocomplete" [displayWith]="displayWith" color="accent" [class]="extended? 'extended':''">
+    <mat-selection-list #selectionList (selectionChange)="itemSelected($event);" >
+      <mat-option disabled="disabled" *ngIf="sortBy && sortBy.length" >
+        Sort By: &nbsp;
+        <mat-radio-group  (change)="sortList($event.value)">
+            <mat-radio-button class="multi-select-radio-button" *ngFor="let item of sortBy" [value]="item.value">
+              {{item.text}}
+            </mat-radio-button>
+        </mat-radio-group>
+      </mat-option>
+      <mat-option disabled="disabled">
+         
+          <mat-checkbox (change)="toggleSelectAll($event.checked);" [checked] = "data && data.length == selection.selected.length">Select All</mat-checkbox>
+         
+        </mat-option>
+      <mat-list-option [id]="'multi-select-option-'+ option.value" *ngFor="let option of filteredOptions | async"
+        [selected]="selection.isSelected(option.value)" [value]="option" checkboxPosition="before">
+        <span class="no-wrap"> {{option.text}} </span>
+      </mat-list-option>
+    </mat-selection-list>
+    <mat-option [style.display]="'none'"></mat-option>
+  </mat-autocomplete>
+
+</mat-form-field>

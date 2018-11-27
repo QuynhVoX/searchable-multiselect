@@ -1,0 +1,42 @@
+.mat-sort-header-container {
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.mat-sort-header-arrow {
+  color: #888;
+  margin-top: 3px !important;
+}
+
+.mat-cell {
+  padding: 0 1.0rem;
+}
+
+.mat-header-cell {
+  padding: 0 1.0rem;
+  font-weight: 700;
+  font-size: 14px;
+  color: currentColor;
+}
+
+.mat-row {
+  align-items: start !important;
+  min-height: 0px !important;
+  padding: 17px 24px !important;
+
+  p {
+    margin-top: 0px !important;
+  }
+
+  p:last-child {
+    margin-bottom: 0px !important;
+  }
+
+}
+
+.mat-sort-header-button {
+  text-align: left;
+}
+
+

@@ -1,0 +1,74 @@
+mat-tab-group {
+  border: 1px solid #e8e8e8;
+
+  > div {
+    padding: 1.6rem;
+  }
+
+  .mat-tab-label-active {
+    background-color: #004f71 !important;
+    border-bottom: none !important;
+    color: #fff;
+
+    .mat-tab-label-content {
+      .ng-star-inserted {
+       &:before {
+         color: #fff;
+       }
+      }
+    }
+
+  }
+
+  mat-ink-bar {
+    display: none;
+  }
+  .mat-tab-label {
+    opacity: 1.0;
+
+
+
+
+  }
+
+}
+
+
+@media (max-width: 1200px) {
+
+  $tab-width: 150px;
+
+  mat-tab-group {
+    .mat-tab-label {
+      padding:0.5rem;
+      height: 120px;
+      width: $tab-width !important;
+      min-width: $tab-width !important;
+
+
+
+      .mat-tab-label-content {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+
+      .badge {
+        display: block;
+        margin-bottom: 0px;
+      }
+
+      span:not(.badge) {
+        display:block;
+        width:120px;
+        white-space: normal;
+        word-wrap: break-word;
+        min-height:40px;
+        margin: 0.5rem 0;
+
+        :before {
+          font-size: 200%;
+        }
+      }
+    }
+  }
+}

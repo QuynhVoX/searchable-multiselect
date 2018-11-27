@@ -1,0 +1,99 @@
+::ng-deep .searchable-in-table .mat-form-field-infix {
+  padding: 0.001em 0 !important;
+  border-top-width: 0.001em !important;
+}
+
+.w-p-85 {
+  width: 85% !important;
+}
+.w-p-95 {
+  width: 95% !important;
+}
+.w-p-100 {
+  width: 100% !important;
+}
+mat-icon {
+  &.fa-times {
+    color: red;
+  }
+
+  &.fa-caret-down {
+    opacity: 0.7;
+  }
+}
+mat-option{
+  padding-left:10px;
+}
+.button-offset {
+  margin-top: -1px;
+  margin-right: -5px;
+}
+.multi-select-pseudo-checkbox {
+  margin-top: -3px;
+}
+.multi-select-option-text {
+  padding-left: 5px;
+}
+.input-wrapper {
+  display: block;
+  overflow: hidden;
+  padding-left: 0px;
+  margin-left: 0px;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
+}
+
+input {
+  max-width: 100%;
+}
+.no-wrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+::ng-deep .mat-list-item-content {
+    padding: 0 10px !important;
+    font-size: 14px !important;
+}
+::ng-deep .mat-list-text {
+  padding-left: 5px !important
+}
+::ng-deep .mat-list-item {
+  height: 40px !important; /* default is 72px */
+}
+/* ::ng-deep .cdk-overlay-pane {
+  width: auto !important;
+} */
+
+::ng-deep .mat-autocomplete-panel.extended{
+  width:fit-content;
+}
+.background-icon {
+  position:absolute; top:20px; right: 0px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.background-icon1 {
+  position:absolute; top:10px; right: 0px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.mat-option.mat-option-disabled{
+  color:rgba(0, 0, 0, 1);
+  border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+ 
+}
+::ng-deep .multi-select-radio-button.mat-radio-button  >* .mat-radio-outer-circle { 
+  width:  18px !important;
+  height: 18px !important;
+}
+::ng-deep .multi-select-radio-button.mat-radio-button  >* .mat-radio-inner-circle {
+   
+  width:  18px !important;
+  height: 18px !important;
+}
+::ng-deep .mat-list-item-content >*.mat-pseudo-checkbox {
+  width:  18px !important;
+  height: 18px !important;
+}

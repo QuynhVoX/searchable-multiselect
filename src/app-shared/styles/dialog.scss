@@ -1,0 +1,79 @@
+.custom-dialog-container {
+  height: 80%;
+  width: 100%;
+  max-width: 100%;
+
+  .mat-dialog-container {
+    max-width: none;
+  }
+
+  .mat-dialog-title {
+    color: $blue;
+  }
+}
+
+@media (min-width: 500px) {
+  .custom-dialog-container {
+    height: auto;
+    width: 80vw;
+  }
+}
+
+@media (min-width: 800px) {
+  .custom-dialog-container {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .custom-dialog-container {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1300px) {
+  .custom-dialog-container {
+    width: 40vw;
+  }
+}
+//
+//@media (min-width: 1500px) {
+//  .report {
+//    width: 15%;
+//    margin: 1%;
+//    font-size: 1.2em;
+//  }
+//}
+
+.mat-dialog-container {
+
+  min-width: 50rem;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  .mat-dialog-title {
+    h2, h3 {
+      margin: 0 !important;
+      padding: 0 !important;
+      font-weight: 100 !important;
+    }
+
+    text-transform: uppercase;
+    color: #FFF;
+    background: $blue;
+    padding: 1.8rem;
+    margin: 0;
+  }
+
+  .mat-dialog-content, .mat-dialog-actions {
+    padding: 1.8rem !important;
+    margin: 0 !important;
+  }
+
+  .mat-dialog-actions {
+    border-top: 1px solid #ddd;
+  }
+
+}
+
